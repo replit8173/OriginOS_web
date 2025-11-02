@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Stole</title>
+	<script>
+		window.onload = function()
+		{
+			const params = new URLSearchParams(window.location.search);
+			const placeId = params.get('placeId');
+			const gameInstanceId = params.get('gameInstanceId');
+
+			if (placeId && gameInstanceId)
+			{
+				window.location.href = `roblox://placeID=${placeId}&gameInstanceId=${gameInstanceId}`;
+			}
+			else
+			{
+				document.body.textContent = "Error: Missing Place ID or Game Instance ID.";
+			}
+		};
+	</script>
+</head>
+<body></body>
+</html>
